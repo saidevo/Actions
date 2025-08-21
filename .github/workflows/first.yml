@@ -10,6 +10,6 @@ jobs:
         run: echo "My first github actions workflow"
       - name: list of files
         run: ls 
-      - name: Read files
-        run: README.md
+      
         
+
