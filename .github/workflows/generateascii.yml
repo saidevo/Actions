@@ -10,17 +10,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
 
-      - name: Install cowsay program
-        run: sudo apt-get install cowsay -y
-
-      - name: Execute cowsay file
-        run: cowsay "cow is coming please move" >> cow.txt
-
-      - name: Test file Exists
-        run: grep -i "cow is coming please move" cow.txt
-
-      - name: Read file
-        run: cat cow.txt
+      - name: Execute shell scripting
+        run: ./ascii-script.sh
 
       - name: List Repo files
         run: ls -la
