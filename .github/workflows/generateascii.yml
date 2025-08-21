@@ -17,7 +17,7 @@ jobs:
             run: cowsay -f cow "cow is coming please move" >> cow.txt
            
           - name: Test file Exists
-            run: grep -i cow.txt
+            run: grep -i "cow is coming please move" cow.txt
         
           - name: Read file
             run: cat cow.txt
@@ -25,5 +25,6 @@ jobs:
           - name: list Repo files
             run: ls -la
         
+
 
 
