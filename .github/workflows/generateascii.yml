@@ -14,7 +14,7 @@ jobs:
             run: sudo apt-get install cowsay -y
         
           - name: execute cowsay file
-            run: cowsay -f cow "cow is coming please move" >> cow.txt
+            run: cowsay cow "cow is coming please move" >> cow.txt
            
           - name: Test file Exists
             run: grep -i "cow is coming please move" cow.txt
@@ -25,6 +25,7 @@ jobs:
           - name: list Repo files
             run: ls -la
         
+
 
 
 
