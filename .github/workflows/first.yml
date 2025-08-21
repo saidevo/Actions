@@ -6,8 +6,12 @@ jobs:
   first_job:
      runs-on: ubuntu-latest
      steps:
-      - name: Welcome message
-        run: echo "My first github actions workflow"
+      - name: Checkout Repo
+        uses: actions/checkout@v5
+
+      - name: TeleCom indian
+        run: echo "telecom indian"
+
       - name: list of files
         run: ls 
       
