@@ -1,0 +1,27 @@
+name: Generate ASCII Artwork
+
+on:
+    push
+
+jobs:
+    asciijobs: 
+        runs-on: ubuntu:latest
+        steps:
+          - name: checkout repo
+            uses: actions/checkout@v5
+        
+          - name: Install cowsay program
+            run: sudo apt-get install cowsay -y
+        
+          - name: execute cowsay file
+            run: cowsay -f cow "cow is coming please move" >> cow.txt
+           
+          - name: Test file Exists
+            run: grep -i cow.txt
+        
+          - name: Read file
+            run: cat cow.txt
+         
+          - name: list Repo files
+            run: ls -la
+        
