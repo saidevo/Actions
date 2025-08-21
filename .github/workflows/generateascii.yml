@@ -10,8 +10,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
 
+      
+      - name: Make script executable
+        run: chmod +x /.github/workflows/ascii-script.sh
+
+
       - name: Execute shell scripting
-        run: ./ascii-script.sh
+        run: ./.github/workflows/ascii-script.sh
+
 
       - name: List Repo files
         run: ls -la
